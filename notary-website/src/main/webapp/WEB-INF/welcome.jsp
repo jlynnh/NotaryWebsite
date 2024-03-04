@@ -19,7 +19,6 @@
 	    
 	</head>
 	<body>
-		<div>
 			<section>
 				<div>
 					<h1 class="header">Notary Express</h1>
@@ -35,56 +34,58 @@
 				</div>
 			</section>
 			<section>
-				<div>
-					<h1>Welcome to Notary Express, <c:out value="${username}"></c:out>!</h1>
-					<p>Please tell us how we can assist you today by filling out the below form.  Thank you!</p>
+				<div class="page">
+					<h1 class="welcome-text">Welcome to Notary Express, <c:out value="${username}"></c:out>!</h1>
+					<p class="welcome-text2">Please tell us how we can assist you today by filling out the below form.  Thank you!</p>
 				</div>
 			</section>
 			<section>
-				<div>
+				<div class="page">
 					<form:form action="/orders" method="post" modelAttribute="order">
 						<form:input type="hidden" path="user" value= "${userId}" />
 						<form:errors path="*" type="text"/>		
 						
+						<h6>Customer Information</h6>
 						<section class="customer-info">
-							<h6>Customer Information</h6>
+							
 							<div class="row">
-								<div class="col">
-									<form:label for="firstName" path="firstName">First Name: </form:label>
-									<form:input path="firstName" type="text"/>	
+								<div class="col-md-5">
+									<form:label class="title" for="firstName" path="firstName">First Name: </form:label>
+									<form:input class="field" path="firstName" type="text"/>	
 								</div>
-								<div class="col">
-									<form:label for="lastName" path="lastName">Last Name: </form:label>
-									<form:input path="lastName" type="text"/>	
+								<div class="col-md-5">
+									<form:label class="title" for="lastName" path="lastName">Last Name: </form:label>
+									<form:input class="field" path="lastName" type="text"/>	
 								</div>
 							</div>
 							<div class="row">
-								<div class="col">
-									<form:label for="address" path="address">Street Address: </form:label>
-									<form:input path="address" type="text"/>	
+								<div class="col-md-5">
+									<form:label class="title" for="address" path="address">Street Address: </form:label>
+									<form:input class="field" path="address" type="text"/>	
 								</div>
-								<div class="col">
-									<form:label for="unit" path="unit">Unit: </form:label>
-									<form:input path="unit" type="text"/>	
+								<div class="col-md-5">
+									<form:label class="title" for="unit" path="unit">Unit: </form:label>
+									<form:input class="field" path="unit" type="text"/>	
 								</div>
 							</div>
 							<div class="row">
-								<div class="col">
-									<form:label for="city" path="city">City: </form:label>
-									<form:input path="city" type="text"/>	
+								<div class="col-md-5">
+									<form:label class="title" for="city" path="city">City: </form:label>
+									<form:input class="field" path="city" type="text"/>	
 								</div>
-								<div class="col">
-									<form:label for="zip" path="zip">Zip Code: </form:label>
-									<form:input path="zip" type="text"/>	
+								<div class="col-md-5">
+									<form:label class="title" for="zip" path="zip">Zip Code: </form:label>
+									<form:input class="field" path="zip" type="text"/>	
 								</div>
 							</div>
 						</section>
+						<h6>Document Information</h6>
 						<section class="document-info">
-							<h6>Document Information</h6>
+							
 							<div class="row">
 								<div class="col">
-									<form:label for="type" path="type">Document Type: </form:label>
-									<form:select name="type" path="type">
+									<form:label class="title" for="type" path="type">Document Type: </form:label>
+									<form:select class="field1" name="type" path="type">
 										<option value="acknowledgments">Acknowledgments A.R.S. § 41-251(1)</option>
 										<option value="verification">Verification on Oath or Affirmation (Jurat) A.R.S. § 41– 251 (16)</option>
 										<option value="oaths">Oaths or Affirmations A.R.S. § 41-251(6)(b)</option>
@@ -92,17 +93,17 @@
 									</form:select>	
 								</div>
 								<div class="col">
-									<form:label for="name" path="name">Document Name: </form:label>
-									<form:input path="pages" type="text"/>
+									<form:label class="title2" for="name" path="name">Document Name: </form:label>
+									<form:input class="field2" path="pages" type="text"/>
 								</div>
 								<div class="col">
-									<form:label for="pages" path="pages"># of Pages: </form:label>
-									<form:input path="pages" type="text"/>	
+									<form:label class="title3" for="pages" path="pages"># of Pages: </form:label>
+									<form:input class="field3" path="pages" type="text"/>	
 								</div>
 							</div>
 							<div class="row">
 								<div class="col">
-									<form:label for="type" path="type">Document Type: </form:label>
+									<form:label class="title" for="type" path="type">Document Type: </form:label>
 									<form:select name="type" path="type">
 										<option value="acknowledgments">Acknowledgments A.R.S. § 41-251(1)</option>
 										<option value="verification">Verification on Oath or Affirmation (Jurat) A.R.S. § 41– 251 (16)</option>
@@ -111,7 +112,7 @@
 									</form:select>	
 								</div>
 								<div class="col">
-									<form:label for="name" path="name">Document Name: </form:label>
+									<form:label class="title" for="name" path="name">Document Name: </form:label>
 									<form:input path="pages" type="text"/>
 								</div>
 								<div class="col">
@@ -139,8 +140,10 @@
 								</div>
 							</div>
 						</section>
+						
+						<h6>Date and Time Selection</h6>
 						<section class="appointment-selection">
-							<h6>Date and Time Selection</h6>
+							
 							<div class="row">
 								<div class="col">
 									<form:label for="appointmentDay" path="appointmentDay">Appointment Day: </form:label>
