@@ -1,5 +1,7 @@
 package com.jenniferlholmes.notarywebsite.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
@@ -14,6 +16,10 @@ public class UserService {
 	
 	@Autowired
 	private UserRepository repo;
+	
+	//Get All
+		public List <User> all() {
+			return repo.findAll();	}
 	
 	//Create
 	public User create(User user) {

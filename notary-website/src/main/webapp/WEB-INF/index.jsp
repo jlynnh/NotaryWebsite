@@ -46,7 +46,7 @@
 				<div class="signup">
 					<p class="login-text1">Login and Order Today!</p>
 					<p class="login-text">--------------------------Sign In-----------------------------</p>
-					<form:form action="/welcome" method="post" modelAttribute="loginUser">
+					<form:form action="/welcome2" method="post" modelAttribute="loginUser">
 						<form:errors path="*" type="text"/>						
 						<div class="row">
 							<form:label class = "col-md-3" for="email" path="email">Email: </form:label>

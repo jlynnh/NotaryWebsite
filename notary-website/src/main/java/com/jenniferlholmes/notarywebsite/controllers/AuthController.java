@@ -52,7 +52,7 @@ public class AuthController {
 		return "redirect:/welcome";
 	}
 	
-	@PostMapping("/welcome")
+	@PostMapping("/welcome2")
 	public String login(@Valid @ModelAttribute LoginUser loginUser, BindingResult result, Model model) {
 		
 		User authenticatedUser = uService.authenticate(loginUser, result);

@@ -34,10 +34,76 @@
 					</ul>
 				</div>
 			</section>
-		</div>
-		<div>
-				<h1>Welcome, <c:out value="${username}"></c:out>!</h1>
-				<p> This is your dashboard.  Nothing to see here yet! </p>
-		</div>
+			<section>
+				<div>
+					<h1>Welcome to Notary Express, <c:out value="${username}"></c:out>!</h1>
+					<p>Please tell us how we can assist you today by filling out the below form.  Thank you!</p>
+				</div>
+			</section>
+			<section>
+				<div>
+					<form:form action="/orders" method="post" modelAttribute="order">
+						<form:input type="hidden" path="user" value= "${userId}" />
+						<form:errors path="*" type="text"/>		
+						<div class="row">
+							<div class="col">
+								<form:label for="firstName" path="firstName">First Name: </form:label>
+								<form:input path="firstName" type="text"/>	
+							</div>
+							<div class="col">
+								<form:label for="lastName" path="lastName">Last Name: </form:label>
+								<form:input path="lastName" type="text"/>	
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<form:label for="address" path="address">Street Address: </form:label>
+								<form:input path="address" type="text"/>	
+							</div>
+							<div class="col">
+								<form:label for="unit" path="unit">Unit: </form:label>
+								<form:input path="unit" type="text"/>	
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<form:label for="city" path="city">City: </form:label>
+								<form:input path="city" type="text"/>	
+							</div>
+							<div class="col">
+								<form:label for="zip" path="zip">Zip Code: </form:label>
+								<form:input path="zip" type="text"/>	
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<form:label for="type" path="type">Document Type: </form:label>
+								<form:input path="type" type="text"/>	
+							</div>
+							<div class="col">
+								<form:label for="name" path="name">Document Name: </form:label>
+								<form:input path="name" type="text"/>	
+							</div>
+							<div class="col">
+								<form:label for="pages" path="pages"># of Pages: </form:label>
+								<form:input path="pages" type="text"/>	
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<form:label for="appointmentDay" path="appointmentDay">Appointment Day: </form:label>
+								<form:input path="appointmentDay" type="text"/>	
+							</div>
+							<div class="col">
+								<form:label for="appointmentTime" path="appointmentTime">Appointment Time: </form:label>
+								<form:input path="appointmentTime" type="text"/>	
+							</div>
+						</div>
+						<div>
+							<button class="save">Submit</button>
+						</div>	
+					</form:form>
+				</div>
+		</section>
 	</body>
 </html>
