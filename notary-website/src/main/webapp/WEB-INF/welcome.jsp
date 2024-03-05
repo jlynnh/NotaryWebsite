@@ -36,7 +36,6 @@
 			<section>
 				<div class="page">
 					<h1 class="welcome-text">Welcome to Notary Express, <c:out value="${username}"></c:out>!</h1>
-					<h1 class="welcome-text">Welcome to Notary Express, <c:out value="${userId}"></c:out>!</h1>
 					<p class="welcome-text2">Please tell us how we can assist you today by filling out the below form.  Thank you!</p>
 				</div>
 			</section>

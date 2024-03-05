@@ -34,16 +34,40 @@
 				</div>
 			</section>
 			<section>
-				<h1 class="welcome-text">Welcome to Notary Express, <c:out value="${username}"></c:out>!</h1>
-				<h1 class="welcome-text">Welcome to Notary Express, <c:out value="${userId}"></c:out>!</h1>
-				<h1>Thank you for your business!</h1>
-				<p>We will be in touch shortly to confirm your day and time.</p>
+				<h1 class = "receipt-text">Thank you for your business!</h1>
+				<p class = "receipt-text2">We will be in touch shortly to confirm your day and time.</p>
+				<p class = "receipt-text2">Confirmation #A0000543</p>
 			</section>
 			<section>
 				<div>
-					<form:form>
+					<p>Contact Information:</p>
+					<p><c:out value="${order.firstName}"></c:out><c:out value="${order.lastName}"></c:out></p>
+					<p>Username:  <c:out value="${order.user.username}"></c:out></p>
+					<p>Email Address:<c:out value="${order.user.email}"></c:out></p>
 					
-					</form:form>
+					<p>Appointment Address:</p>
+					<p><c:out value="${order.address}"></c:out>  #<c:out value="${order.unit}"></c:out></p>
+					<p><c:out value="${order.city}"></c:out>, AZ, <c:out value="${order.zip}"></c:out></p>
+					
+					<p>Document(s):</p>
+					<ul>
+						<li><c:out value="${order.type}"></c:out></li>
+						<li><c:out value="${order.name}"></c:out></li>
+						<li>Page Count:  <c:out value="${order.pages}"></c:out></li>
+						<li><c:out value="${order.typeTwo}"></c:out></li>
+						<li><c:out value="${order.nameTwo}"></c:out></li>
+						<li>Page Count:  <c:out value="${order.pagesTwo}"></c:out></li>
+						<li><c:out value="${order.typeThree}"></c:out></li>
+						<li><c:out value="${order.nameThree}"></c:out></li>
+						<li>Page Count:  <c:out value="${order.pagesThree}"></c:out></li>
+					</ul>
+					
+					
+					<p>Appointment:</p>
+					<p>We will email you shortly to  confirm your appointment date and time.</p>
+					<p>Proposed Date: <c:out value="${order.appointment}"></c:out></p>
+					<p>Proposed Time: <c:out value="${order.timing}"></c:out></p>
+					
 				</div>
 			</section>
 	

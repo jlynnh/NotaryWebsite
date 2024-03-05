@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+
 
 import com.jenniferlholmes.notarywebsite.models.Order;
 import com.jenniferlholmes.notarywebsite.models.User;
@@ -65,7 +65,7 @@ public class OrderController {
 	public String displayOrder(@PathVariable("id") Long id, Model model) {
 		Order ordersFromDB = orderService.findOne(id);
 		model.addAttribute("order", ordersFromDB);
-		return "edit.jsp";
+		return "receipt.jsp";
 	}
 	
 		
