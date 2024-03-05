@@ -73,20 +73,22 @@ h6{
 	border: 1px solid #204060;
 	padding-top: 20px;
 	padding-left: 20px;
-	width: 55%;
+	width: 65%;
 	font-size: 8pt;
-	background-color: yellow;
+	background-color: #c6d9ec;
 	
 }
 
 .col{
-	background-color: pink;
+	
+	width: 33.3%;
 }
 
 .row{
 	
 	height: 40px;
 }
+
 
 h4{
 	color: #d3d4d3;
@@ -108,7 +110,7 @@ h4{
 .signup{
 	border: 1px solid #505050;
 	width: 30%;
-	height: 60%;
+	height: 70%;
 	margin: 0 auto;
 	padding: 0 auto;
 	padding-top: 4px;
@@ -160,11 +162,54 @@ h4{
 }
 
 .title{
-	width: 25%;
+	width: 30%;
 }
 
 .field{
 	width: 60%;
+}
+
+.title1, .title2 {
+	width: 20%;
+	height: 50%;
+	font-size: 8pt;
+	color: #204060;
+	font-weight: bold;
+	
+}
+
+.field1, .field2 {
+	width: 75%;
+	height: 55%;
+	font-size: 8pt;
+	color: #204060;
+	font-weight: bold;
+	
+}
+
+.title3{
+	width: 30%;
+	font-size: 8pt;
+	color: #204060;
+	font-weight: bold;
+}
+
+.field3 {
+	width: 20%;
+	font-size: 8pt;
+	color: #204060;
+	font-weight: bold;
+}
+
+.appt, .appt-input{
+	font-size: 8pt;
+	color: #204060;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.appt-inpu{
+	width: 50%;
 }
 
 .custom-btn{
@@ -180,6 +225,19 @@ h4{
 	box-shadow: 3px 3px grey;
 	color: white;
 	
+	
+}
+
+.submit {
+	width: 65%;
+	height: 35px;
+	font-size: 8pt;
+	font-weight: bold;
+	background-color: #2e5cb8;
+	border: 2px solid #24478f;
+	box-shadow: 3px 3px grey;
+	color: white;
+	margin-top: 20px;
 	
 }
 

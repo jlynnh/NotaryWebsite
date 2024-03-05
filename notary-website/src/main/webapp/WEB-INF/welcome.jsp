@@ -28,7 +28,7 @@
 				<div>
 					<ul class="main-nav">
 						<li><a href="/logout">Logout</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="#">About</a></li>
 						<li><a href="#">Feedback</a></li>
 					</ul>
 				</div>
@@ -84,59 +84,65 @@
 							
 							<div class="row">
 								<div class="col">
-									<form:label class="title" for="type" path="type">Document Type: </form:label>
+									<form:label class="title1" for="type" path="type">Type: </form:label>
 									<form:select class="field1" name="type" path="type">
+										<option value="into">Choose From List</option>
 										<option value="acknowledgments">Acknowledgments A.R.S. § 41-251(1)</option>
-										<option value="verification">Verification on Oath or Affirmation (Jurat) A.R.S. § 41– 251 (16)</option>
+										<option value="verification">Verification on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
+										<option value="affirmation">Affirmation on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
 										<option value="oaths">Oaths or Affirmations A.R.S. § 41-251(6)(b)</option>
 										<option value="certification">Certifications A.R.S. § 41-253(D)</option>
 									</form:select>	
 								</div>
 								<div class="col">
-									<form:label class="title2" for="name" path="name">Document Name: </form:label>
-									<form:input class="field2" path="pages" type="text"/>
+									<form:label class="title2" for="name" path="name">Name: </form:label>
+									<form:input class="field2" path="name" type="text"/>
 								</div>
 								<div class="col">
-									<form:label class="title3" for="pages" path="pages"># of Pages: </form:label>
+									<form:label class="title3" for="pages" path="pages"># Pages: </form:label>
 									<form:input class="field3" path="pages" type="text"/>	
 								</div>
 							</div>
 							<div class="row">
 								<div class="col">
-									<form:label class="title" for="type" path="type">Document Type: </form:label>
-									<form:select name="type" path="type">
+									<form:label class="title1" for="typeTwo" path="typeTwo">Type: </form:label>
+									<form:select class="field1" name="typeTwo" path="typeTwo">
+										<option value="into">Choose From List</option>
 										<option value="acknowledgments">Acknowledgments A.R.S. § 41-251(1)</option>
-										<option value="verification">Verification on Oath or Affirmation (Jurat) A.R.S. § 41– 251 (16)</option>
+										<option value="verification">Verification on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
+										<option value="affirmation">Affirmation on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
 										<option value="oaths">Oaths or Affirmations A.R.S. § 41-251(6)(b)</option>
 										<option value="certification">Certifications A.R.S. § 41-253(D)</option>
 									</form:select>	
 								</div>
 								<div class="col">
-									<form:label class="title" for="name" path="name">Document Name: </form:label>
-									<form:input path="pages" type="text"/>
+									<form:label class="title2" for="nameTwo" path="nameTwo">Name: </form:label>
+									<form:input class="field2" path="nameTwo" type="text"/>
 								</div>
 								<div class="col">
-									<form:label for="pages" path="pages"># of Pages: </form:label>
-									<form:input path="pages" type="text"/>	
+									<form:label class="title3" for="pagesTwo" path="pagesTwo"># Pages: </form:label>
+									<form:input class="field3" path="pagesTwo" type="text"/>	
 								</div>
 							</div>
 							<div class="row">
 								<div class="col">
-									<form:label for="type" path="type">Document Type: </form:label>
-									<form:select name="type" path="type">
+									<form:label class="title1" for="typeThree" path="typeThree">Type: </form:label>
+									<form:select class="field1" name="typeThree" path="typeThree">
+										<option value="into">Choose From List</option>
 										<option value="acknowledgments">Acknowledgments A.R.S. § 41-251(1)</option>
-										<option value="verification">Verification on Oath or Affirmation (Jurat) A.R.S. § 41– 251 (16)</option>
+										<option value="verification">Verification on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
+										<option value="affirmation">Affirmation on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
 										<option value="oaths">Oaths or Affirmations A.R.S. § 41-251(6)(b)</option>
 										<option value="certification">Certifications A.R.S. § 41-253(D)</option>
 									</form:select>	
 								</div>
 								<div class="col">
-									<form:label for="name" path="name">Document Name: </form:label>
-									<form:input path="pages" type="text"/>
+									<form:label class="title2" for="nameThree" path="nameThree">Name: </form:label>
+									<form:input class="field2" path="nameThree" type="text"/>
 								</div>
 								<div class="col">
-									<form:label for="pages" path="pages"># of Pages: </form:label>
-									<form:input path="pages" type="text"/>	
+									<form:label class="title3" for="pagesThree" path="pagesThree"># Pages: </form:label>
+									<form:input class="field3" path="pagesThree" type="text"/>	
 								</div>
 							</div>
 						</section>
@@ -146,20 +152,31 @@
 							
 							<div class="row">
 								<div class="col">
-									<form:label for="appointmentDay" path="appointmentDay">Appointment Day: </form:label>
-									<form:input path="appointmentDay" type="date"/>	
+									<form:label class="appt" for="appointment" path="appointment">Preferred Date: </form:label>
+									<form:input class="appt-input" path="appointment" type="text"/>	
 								</div>
 								<div class="col">
-									<form:label for="appointmentTime" path="appointmentTime">Appointment Time: </form:label>
-									<form:input path="appointmentTime" type="time"/>	
+									<form:label class="appt" for="timing" path="timing">Preferred Time: </form:label>
+									<form:select class="appt-input" name="timing" path="timing">
+										<option value="timeslot">Choose From List</option>
+										<option value="am">08:00AM - 12:00PM</option>
+										<option value="mid">10:00AM - 02:00PM</option>
+										<option value="pm">12:00PM - 05:00PM</option>
+										<option value="late-pm">05:00PM - 09:00PM</option>
+									</form:select>	
 								</div>
 							</div>
 						</section>
 						<div>
-							<button class="save">Submit</button>
+							<button class="submit">Submit</button>
 						</div>	
 					</form:form>
 				</div>
+		</section>
+		<section>
+			<div class="footer">
+				<p class="footer-text">We are not lawyers, and don’t give legal advice, so always check with your own attorneys, advisors, or document recipients if you have unanswered questions about notarization or digitally notarized documents.</p>
+			</div>
 		</section>
 	</body>
 </html>
