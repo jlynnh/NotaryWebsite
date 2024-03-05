@@ -1,5 +1,7 @@
 package com.jenniferlholmes.notarywebsite.controllers;
 
+
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.jenniferlholmes.notarywebsite.models.Order;
+import com.jenniferlholmes.notarywebsite.models.User;
 import com.jenniferlholmes.notarywebsite.services.OrderService;
 import com.jenniferlholmes.notarywebsite.services.UserService;
 
@@ -22,7 +25,6 @@ import jakarta.validation.Valid;
 
 
 @Controller
-@RequestMapping("/orders")
 
 public class OrderController {
 	
@@ -30,35 +32,40 @@ public class OrderController {
 	private OrderService orderService;
 	
 	@Autowired
-	private UserService userService;
+	private UserService uService;
 	
-	
-	@GetMapping("")
-	public String OrderForm(@ModelAttribute("order") Order order, HttpSession session, Model model) {
+	@GetMapping("/welcome")
+	public String welcome(@ModelAttribute ("order") Order order, HttpSession session, Model model) {
 		List<Order> allOrders = orderService.findAll();
 		model.addAttribute("allOrders", allOrders);
-		model.addAttribute("userId", (Long)session.getAttribute("loggedInUser"));
+		model.addAttribute("userId",(Long) session.getAttribute("loggedInUser"));
+		if(session.getAttribute("loggedInUser") == null) {
+			return "redirect:/login-registration";
+		}
 		
-		
+		User userFromDb = uService.findOne((Long)session.getAttribute("loggedInUser"));
+		/* List <Order> allOrders = orderService.findAll(); */
+		model.addAttribute("username", userFromDb.getUsername());
+		/* model.addAttribute("order", allOrders); */
 		return "welcome.jsp";
 	}
 	
-	@PostMapping("")
+	@PostMapping("/welcome")
 	public String createOrder(@Valid @ModelAttribute("order") Order order, BindingResult result) {
 		
 		if(result.hasErrors()) {
-			return "/welcome.jsp";
+		return "redirect:/welcome";
 		}
 		orderService.create(order);
-		return "redirect:/reciept";
+		return "receipt.jsp";
 	}	
 	
 	//Display One Order 
 	@GetMapping("/{id}")
-	public String displayOrder(@PathVariable() Long id, Model model) {
+	public String displayOrder(@PathVariable("id") Long id, Model model) {
 		Order ordersFromDB = orderService.findOne(id);
 		model.addAttribute("order", ordersFromDB);
-		return "receipt.jsp";
+		return "edit.jsp";
 	}
 	
 		
@@ -68,4 +75,10 @@ public class OrderController {
         orderService.destroy(id);
         return "redirect:/welcome";
     }
+	
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:/login-registration";
+	}
 }

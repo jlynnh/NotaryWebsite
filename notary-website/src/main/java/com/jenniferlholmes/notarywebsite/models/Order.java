@@ -89,11 +89,11 @@ public class Order {
 	private String pages;
 	
 	//Number of Pages for Document #2 Optional
-	@Size (min=1, max=250, message="Minimum of 1 page required.")
+	@Size (min=0, max=250, message="Minimum of 1 page required.")
 	private String pagesTwo;
 	
 	//Number of Pages for Document #3 Optional
-	@Size (min=1, max=250, message="Minimum of 1 page required.")
+	@Size (min=0, max=250, message="Minimum of 1 page required.")
 	private String pagesThree;
 	
 	//Appointment Date 

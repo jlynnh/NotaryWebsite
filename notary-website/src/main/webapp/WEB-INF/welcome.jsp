@@ -36,12 +36,13 @@
 			<section>
 				<div class="page">
 					<h1 class="welcome-text">Welcome to Notary Express, <c:out value="${username}"></c:out>!</h1>
+					<h1 class="welcome-text">Welcome to Notary Express, <c:out value="${userId}"></c:out>!</h1>
 					<p class="welcome-text2">Please tell us how we can assist you today by filling out the below form.  Thank you!</p>
 				</div>
 			</section>
 			<section>
 				<div class="page">
-					<form:form action="/orders" method="post" modelAttribute="order">
+					<form:form action="/welcome" method="post" modelAttribute="order">
 						<form:input type="hidden" path="user" value= "${userId}" />
 						<form:errors path="*" type="text"/>		
 						
@@ -152,7 +153,7 @@
 							
 							<div class="row">
 								<div class="col">
-									<form:label class="appt" for="appointment" path="appointment">Preferred Date: </form:label>
+									<form:label class="appt" for="appointment" path="appointment">Preferred Date (MM-DD-YYYY): </form:label>
 									<form:input class="appt-input" path="appointment" type="text"/>	
 								</div>
 								<div class="col">
