@@ -79,6 +79,22 @@ h6{
 	
 }
 
+.contact, .document, .appointment {
+	font-weight: bold;
+	font-size: 10pt;
+	color: #204060;
+}
+
+.output{
+	font-size: 8pt;
+	color: #707075;
+	
+}
+
+.receipt{
+	margin-left: 4%;
+}
+
 .col{
 	
 	width: 33.3%;
@@ -102,10 +118,19 @@ h4{
 
 .receipt-text{
 	text-align: center;
+	color: #204060;
 }
 .receipt-text2{
 	text-align: center;
 	font-style: italic;
+	color: #204060;
+}
+
+.receipt-text3{
+	text-align: center;
+	font-style: bold;
+	font-size: 10pt;
+	color: #204060;
 }
 
 .background-image{
