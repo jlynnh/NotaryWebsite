@@ -30,6 +30,7 @@
 						<li><a href="/logout">Logout</a></li>
 						<li><a href="#">About</a></li>
 						<li><a href="#">Feedback</a></li>
+						<li><a href="/admin">Edit/Cancel</a></li>
 					</ul>
 				</div>
 			</section>

@@ -30,6 +30,7 @@
 						<li><a href="/logout">Logout</a></li>
 						<li><a href="#">About</a></li>
 						<li><a href="#">Feedback</a></li>
+						<li><a href="/admin">Admin</a></li>
 					</ul>
 				</div>
 			</section>
@@ -86,12 +87,12 @@
 								<div class="col">
 									<form:label class="title1" for="type" path="type">Type: </form:label>
 									<form:select class="field1" name="type" path="type">
-										<option value="into">Choose From List</option>
-										<option value="acknowledgments">Acknowledgments A.R.S. § 41-251(1)</option>
-										<option value="verification">Verification on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
-										<option value="affirmation">Affirmation on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
-										<option value="oaths">Oaths or Affirmations A.R.S. § 41-251(6)(b)</option>
-										<option value="certification">Certifications A.R.S. § 41-253(D)</option>
+										<option value="Choose From List">Choose From List</option>
+										<option value="Acknowledgments A.R.S. § 41-251(1)">Acknowledgments A.R.S. § 41-251(1)</option>
+										<option value="Verification on Oath (Jurat) A.R.S. § 41– 251 (16)">Verification on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
+										<option value="VAffirmation on Oath (Jurat) A.R.S. § 41– 251 (16)">Affirmation on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
+										<option value="Oaths or Affirmations A.R.S. § 41-251(6)(b)">Oaths or Affirmations A.R.S. § 41-251(6)(b)</option>
+										<option value="Certifications A.R.S. § 41-253(D)">Certifications A.R.S. § 41-253(D)</option>
 									</form:select>	
 								</div>
 								<div class="col">
@@ -107,12 +108,12 @@
 								<div class="col">
 									<form:label class="title1" for="typeTwo" path="typeTwo">Type: </form:label>
 									<form:select class="field1" name="typeTwo" path="typeTwo">
-										<option value="into">Choose From List</option>
-										<option value="acknowledgments">Acknowledgments A.R.S. § 41-251(1)</option>
-										<option value="verification">Verification on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
-										<option value="affirmation">Affirmation on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
-										<option value="oaths">Oaths or Affirmations A.R.S. § 41-251(6)(b)</option>
-										<option value="certification">Certifications A.R.S. § 41-253(D)</option>
+										<option value="Choose From List">Choose From List</option>
+										<option value="Acknowledgments A.R.S. § 41-251(1)">Acknowledgments A.R.S. § 41-251(1)</option>
+										<option value="Verification on Oath (Jurat) A.R.S. § 41– 251 (16)">Verification on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
+										<option value="VAffirmation on Oath (Jurat) A.R.S. § 41– 251 (16)">Affirmation on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
+										<option value="Oaths or Affirmations A.R.S. § 41-251(6)(b)">Oaths or Affirmations A.R.S. § 41-251(6)(b)</option>
+										<option value="Certifications A.R.S. § 41-253(D)">Certifications A.R.S. § 41-253(D)</option>
 									</form:select>	
 								</div>
 								<div class="col">
@@ -128,12 +129,12 @@
 								<div class="col">
 									<form:label class="title1" for="typeThree" path="typeThree">Type: </form:label>
 									<form:select class="field1" name="typeThree" path="typeThree">
-										<option value="into">Choose From List</option>
-										<option value="acknowledgments">Acknowledgments A.R.S. § 41-251(1)</option>
-										<option value="verification">Verification on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
-										<option value="affirmation">Affirmation on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
-										<option value="oaths">Oaths or Affirmations A.R.S. § 41-251(6)(b)</option>
-										<option value="certification">Certifications A.R.S. § 41-253(D)</option>
+										<option value="Choose From List">Choose From List</option>
+										<option value="Acknowledgments A.R.S. § 41-251(1)">Acknowledgments A.R.S. § 41-251(1)</option>
+										<option value="Verification on Oath (Jurat) A.R.S. § 41– 251 (16)">Verification on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
+										<option value="VAffirmation on Oath (Jurat) A.R.S. § 41– 251 (16)">Affirmation on Oath (Jurat) A.R.S. § 41– 251 (16)</option>
+										<option value="Oaths or Affirmations A.R.S. § 41-251(6)(b)">Oaths or Affirmations A.R.S. § 41-251(6)(b)</option>
+										<option value="Certifications A.R.S. § 41-253(D)">Certifications A.R.S. § 41-253(D)</option>
 									</form:select>	
 								</div>
 								<div class="col">
@@ -158,11 +159,11 @@
 								<div class="col">
 									<form:label class="appt" for="timing" path="timing">Preferred Time: </form:label>
 									<form:select class="appt-input" name="timing" path="timing">
-										<option value="timeslot">Choose From List</option>
-										<option value="am">08:00AM - 12:00PM</option>
-										<option value="mid">10:00AM - 02:00PM</option>
-										<option value="pm">12:00PM - 05:00PM</option>
-										<option value="late-pm">05:00PM - 09:00PM</option>
+										<option value="Choose From List">Choose From List</option>
+										<option value="08:00AM - 12:00PM">08:00AM - 12:00PM</option>
+										<option value="10:00AM - 02:00PM">10:00AM - 02:00PM</option>
+										<option value="12:00PM - 05:00PM">12:00PM - 05:00PM</option>
+										<option value="05:00PM - 09:00PM">05:00PM - 09:00PM</option>
 									</form:select>	
 								</div>
 							</div>

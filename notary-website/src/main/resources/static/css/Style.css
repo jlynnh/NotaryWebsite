@@ -69,6 +69,14 @@ h6{
 	
 }
 
+h3{
+	font-size: 14pt;
+	color: #204060;
+	margin-top: 10px;
+	font-weight: bold;
+	
+}
+
 .customer-info, .document-info, .appointment-selection{
 	border: 1px solid #204060;
 	padding-top: 20px;
@@ -355,6 +363,19 @@ h5{
 	padding: 0 auto;
 	padding-top: 10px;
 }
+
+.page2{
+	margin-left: 4%;
+	margin-right: 4%;
+	background-color:#ecf2f9; 
+}
+
+table{
+	font-size: 10pt;
+	
+}
+
+
 
 
 
